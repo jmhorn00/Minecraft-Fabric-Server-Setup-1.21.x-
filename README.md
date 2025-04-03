@@ -1,5 +1,6 @@
 # Minecraft Fabric Server (1.21.x) - Linux Setup
-(1.21.1)-(1.21.5) This will work for older version as well but the java version may be diffrent.
+##(1.21.1)-(1.21.5) This will work for older version as well but the java version may be diffrent.
+
 This repository contains the necessary files to run a **Minecraft Java Edition Fabric server** for version **1.21.x and later** on a **Linux machine**.
 
 ## Requirements
