@@ -44,7 +44,7 @@ Place the downloaded `.jar` file (e.g., `fabric-server-launch.jar`) into your `~
 Use a text editor like `nano` to create your startup script:
 
 ```bash
-nano run.sh
+sudo nano run.sh
 ```
 
 Paste in the following template, adjusting the RAM values based on your available memory (2GB per user is a good rule of thumb):
@@ -57,19 +57,19 @@ java -Xms2G -Xmx2G -jar fabric-server-launch.jar nogui
 Save and exit, then make the script executable:
 
 ```bash
-chmod +x run.sh
+sudo chmod +x run.sh
 ```
 
 ### 6. How to Start the Server
 
 ```bash
-./run.sh
+sudo ./run.sh
 ```
 
 After that runs, you might have to press Control + C, then:
 
 ```bash
-nano eula.txt
+ sudo nano eula.txt
 ```
 
 Change `eula=false` to `eula=true` and save.
@@ -83,7 +83,7 @@ You can configure the server to automatically restart using a `cron` job and a s
 In your server directory, create a file named `restart.sh`:
 
 ```bash
-nano restart.sh
+sudo nano restart.sh
 ```
 
 Add the following content:
@@ -112,7 +112,7 @@ screen -dmS minecraft ./run.sh
 Make it executable:
 
 ```bash
-chmod +x restart.sh
+sudo chmod +x restart.sh
 ```
 
 #### 2. Add a Cron Job
@@ -120,7 +120,7 @@ chmod +x restart.sh
 Edit the crontab for your user:
 
 ```bash
-crontab -e
+sudo crontab -e
 ```
 
 Add the following line to restart the server every day at 4:00 AM (adjust as needed):
